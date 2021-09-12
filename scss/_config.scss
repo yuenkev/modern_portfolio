@@ -11,7 +11,7 @@ in which units of functionality are created in a class and then mixed in with ot
 $primary-color: #444;
 $secondary-color: skyblue;
 $show-home-image: true;
-$home-image: url(/dist/img/background.jpg);
+$home-image: black;
 $background-opacity: 0.65;
 
 @mixin easeOut {

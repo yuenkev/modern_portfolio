@@ -50,7 +50,7 @@ h3 {
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba($color: lighten($primary-color, 0.5), $alpha: 0.1);
+    //background: rgba($color: lighten($primary-color, 0.5), $alpha: 0.1);
   }
 }
 
@@ -72,7 +72,7 @@ header {
 }
 
 .nav-list {
-  text-align: center;
+  text-align: right;
   padding: 30px;
   z-index: 2;
   font-size: 20px;
