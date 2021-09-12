@@ -12,7 +12,7 @@ $primary-color: #444;
 $secondary-color: skyblue;
 $show-home-image: true;
 $home-image: url(/dist/img/background.jpg);
-$background-opacity: 0.5;
+$background-opacity: 0.65;
 
 @mixin easeOut {
   transition: all 0.5s ease-out;
@@ -31,11 +31,20 @@ $background-opacity: 0.5;
         top: 0;
         right: 0;
         width: 100%;
-        height: 100%;
+        height: 165vh;
         z-index: -1;
         background: rgba($color: $primary-color, $alpha: $background-opacity);
       }
     }
+  }
+}
+
+//set text color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
   }
 }
 

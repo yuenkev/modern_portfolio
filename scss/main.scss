@@ -6,14 +6,22 @@
   box-sizing: border-box;
 }
 
+#work {
+  text-align: center;
+}
+
 body {
   @include background;
   background: $primary-color;
-  color: #fff;
+  color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
+}
+
+#blank {
+  background: #444;
 }
 
 //Headings
@@ -26,6 +34,19 @@ h3 {
   &.lg-heading {
     font-size: 6rem;
   }
+
+  &.md-heading {
+    font-size: 2rem;
+    padding-top: 50px;
+    text-align: center;
+  }
+
+  &.md2-heading {
+    font-size: 1.75rem;
+    padding: 15px;
+    text-align: center;
+  }
+
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
@@ -36,12 +57,40 @@ h3 {
 a {
   color: #fff;
   text-decoration: none;
+  @include easeOut;
+
+  &:hover {
+    color: $secondary-color;
+  }
 }
 
 header {
   position: fixed;
   z-index: 2;
   width: 100%;
+  background: rgba($color: lighten($primary-color, 0.5), $alpha: 0.15);
+}
+
+.nav-list {
+  text-align: center;
+  padding: 30px;
+  z-index: 2;
+  font-size: 20px;
+  font-weight: sharp;
+
+  a {
+    padding-left: 11px;
+  }
+}
+
+.namelogo {
+  position: absolute;
+  left: 35px;
+  top: 20px;
+}
+
+.text-primary {
+  color: #fff;
 }
 
 .text-secondary {
@@ -72,5 +121,302 @@ main {
     h1 {
       margin-top: 20vh;
     }
+  }
+}
+
+.bio-image {
+  margin: auto;
+  position: center;
+  border-radius: 50%;
+  border: $secondary-color 3px solid;
+  width: 150px;
+  height: 150px;
+}
+
+#main-footer {
+  @include background;
+  text-align: center;
+  padding-top: 1rem;
+  color: set-text-color($primary-color);
+  height: 60px;
+  font-weight: sharp;
+
+  a {
+    padding-left: 10px;
+  }
+
+  .icons {
+    padding-bottom: 5px;
+  }
+}
+
+.bio {
+  h3 {
+    font-size: 25px;
+    font-weight: 600;
+    padding-top: 1.5rem;
+  }
+
+  p {
+    padding-left: 1rem;
+    font-size: 1rem;
+    font-weight: normal;
+  }
+}
+
+.fa-hand-sparkles {
+  color: #ffde34;
+}
+
+.Education {
+  padding-top: 1rem;
+  .Edu {
+    text-align: center;
+    color: $secondary-color;
+  }
+
+  .EduSub {
+    text-align: center;
+    color: rgba($color: lighten(#fff, 0.9), $alpha: 0.6);
+  }
+}
+
+.qualification-button {
+  font-size: 15px;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+
+  i {
+    color: $secondary-color;
+  }
+}
+
+.qualification-tabs {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+}
+
+.container-edu {
+  display: flex;
+  justify-content: center;
+
+  h2 i {
+    color: $secondary-color;
+  }
+
+  h2 {
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  h3 {
+    color: rgba($color: lighten(#fff, 0.9), $alpha: 0.6);
+    font-size: 15px;
+  }
+}
+
+.box1 {
+  flex: 1;
+  text-align: right;
+}
+
+.box2 {
+  flex: 1;
+
+  .EduDot {
+    margin: auto;
+    width: 13px;
+    height: 13px;
+    background: $secondary-color;
+    border-radius: 50%;
+  }
+
+  .EduLine {
+    margin: auto;
+    width: 2.5px;
+    height: 75px;
+    background-color: $secondary-color;
+  }
+}
+
+.box3 {
+  flex: 1;
+  text-align: left;
+}
+
+/* contact form page */
+
+.content h2 {
+  padding-top: 40px;
+  padding-bottom: 5px;
+}
+
+.contact {
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact .content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.contact .content h2 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #fff;
+}
+.contact .content p {
+  font-size: 20px;
+  font-weight: 350;
+  color: #fff;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.container .contactInfo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .contactInfo .box {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+
+.container .contactInfo .icon {
+  min-width: 65px;
+  height: 65px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 25px;
+
+  i {
+    color: #444;
+  }
+}
+
+.container .contactInfo .box .text {
+  display: flex;
+  margin-left: 20px;
+  font-size: 17px;
+  color: #fff;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+.container .contactInfo .box .text h3 {
+  font-weight: 500;
+  font-size: 20px;
+  color: $secondary-color;
+}
+
+.container .contactInfo .box .text p {
+  font-weight: 500;
+  font-size: 17px;
+  color: #fff;
+}
+
+.contactForm {
+  width: 40%;
+  padding: 40px;
+  background: #fff;
+}
+
+.contactForm h2 {
+  color: #444;
+  font-weight: 500;
+}
+
+.contactForm p {
+  color: #444;
+}
+
+.contactForm .inputBox {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  color: #444;
+  font-weight: 500;
+
+  label {
+    font-size: 0px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+
+.contactForm .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+  color: #e91e63;
+  font-size: 15px;
+  transform: translate(-25px, -22.5px);
+}
+
+.contactForm .inputBox input[type="submit"] {
+  width: 100px;
+  background: $secondary-color;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+
+@media (max-width: 991px) {
+  .contact {
+    padding: 50px;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .container .contactInfo {
+    margin-bottom: 40px;
+  }
+  .container .contactInfo,
+  .contactForm {
+    width: 100%;
   }
 }
