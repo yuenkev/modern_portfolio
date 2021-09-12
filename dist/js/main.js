@@ -1,4 +1,4 @@
-//Select DOM Items
+/*Select DOM Items
 
 const menuBtn = document.querySelector(".menu-btn");
 const menu = document.querySelector(".menu");
@@ -33,6 +33,7 @@ function toggleMenu() {
     showMenu = false;
   }
 }
+*/
 
 //submit functionality with the form
 
@@ -46,7 +47,7 @@ CForm.addEventListener("submit", (event) => {
 
   // Use your API endpoint URL you copied from the previous step
   const endpoint =
-    "https://o795gqh7v7.execute-api.us-east-1.amazonaws.com/default/sendContactEmail";
+    "https://hg6rzemw3d.execute-api.us-east-2.amazonaws.com/default/sendContactEmail";
   // We use JSON.stringify here so the data can be sent as a string via HTTP
   const body = JSON.stringify({
     senderName: name.value,
