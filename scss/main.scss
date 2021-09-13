@@ -85,8 +85,9 @@ header {
 
 .namelogo {
   position: absolute;
+  text-align: left;
   left: 35px;
-  top: 20px;
+  top: 25px;
 }
 
 .text-primary {
@@ -235,7 +236,7 @@ main {
   .EduLine {
     margin: auto;
     width: 2.5px;
-    height: 135px;
+    height: 20vh;
     background-color: $secondary-color;
   }
 }
