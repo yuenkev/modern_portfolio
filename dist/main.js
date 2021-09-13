@@ -1,4 +1,4 @@
-/*Select DOM Items
+//Select DOM Items
 
 const menuBtn = document.querySelector(".menu-btn");
 const menu = document.querySelector(".menu");
@@ -33,7 +33,6 @@ function toggleMenu() {
     showMenu = false;
   }
 }
-*/
 
 //submit functionality with the form
 
